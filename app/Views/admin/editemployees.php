@@ -50,7 +50,9 @@
 					<div class="clearfix">
 						<div class="pull-left">
 							<h4 class="text-blue h4">EMPLOYEE PERSONAL DETAILS</h4>
-							<p class="mb-20"></p>
+							<p class="mb-20"><input type="hidden" name="id" id="id" value="<?php echo $data['id']; ?>"></p>
+
+
 						</div>
 					</div>
 					<div class="wizard-content">
