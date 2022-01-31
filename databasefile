@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 15, 2021 at 06:48 AM
+-- Generation Time: Jan 31, 2022 at 11:29 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -82,16 +82,18 @@ CREATE TABLE IF NOT EXISTS `emptbl` (
   `pprovince` varchar(250) DEFAULT NULL,
   `ppostalcode` int(250) DEFAULT NULL,
   `pcountry` varchar(250) DEFAULT NULL,
+  `emyId` int(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `emptbl`
 --
 
-INSERT INTO `emptbl` (`id`, `empNo`, `title`, `firstname`, `nickname`, `surname`, `gender`, `ethicsgroup`, `maritalstatus`, `disability`, `citizenship`, `idno`, `passport`, `sarstaxno`, `homecellno`, `hometellno`, `workcellno`, `worktellno`, `personalemail`, `workemail`, `streetname`, `city`, `province`, `postalcode`, `country`, `pstreetname`, `pcity`, `pprovince`, `ppostalcode`, `pcountry`) VALUES
-(4, 1230, 'Mr', 'Thabo', 'Tbos', 'Dlamini', 'Male', 'Black', 'Single', 'No', 'RSA', 2147483647, 2147483647, 1331331113, 878177400, 878177400, 878177400, 878177400, 'Thabo@pp.co.za', 'Thabo@pp.co.za', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia'),
-(7, 1230, 'Mr', 'Thabo', 'Tbos', 'Dlamini', 'Male', 'Black', 'Single', 'No', 'RSA', 2147483647, 2147483647, 1331331113, 878177400, 878177400, 878177400, 878177400, 'Thabo@pp.co.za', 'Thabo@pp.co.za', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia');
+INSERT INTO `emptbl` (`id`, `empNo`, `title`, `firstname`, `nickname`, `surname`, `gender`, `ethicsgroup`, `maritalstatus`, `disability`, `citizenship`, `idno`, `passport`, `sarstaxno`, `homecellno`, `hometellno`, `workcellno`, `worktellno`, `personalemail`, `workemail`, `streetname`, `city`, `province`, `postalcode`, `country`, `pstreetname`, `pcity`, `pprovince`, `ppostalcode`, `pcountry`, `emyId`) VALUES
+(4, 1230, 'Mr', 'Thabang', 'Tbos', 'Makula', 'Male', 'Black', 'Single', 'No', 'RSA', 2147483647, 2147483647, 1331331113, 878177400, 878177400, 878177400, 878177400, 'Thabang@pp.co.za', 'Thabang@pp.co.za', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', 0),
+(7, 1230, 'Mr', 'Thabiso', 'Tbos', 'Makula', 'Male', 'Black', 'Single', 'No', 'RSA', 2147483647, 2147483647, 1331331113, 878177400, 878177400, 878177400, 878177400, 'Thabo@pp.co.za', 'Thabo@pp.co.za', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', '12121 qwewewe', 'WESDRT', 'Gauteng', 1212, 'Saudi Arabia', 0),
+(9, 1243, 'mrs', 'Letswalo', '', 'Mosia', 'Male', 'Black', 'Single', 'No', 'RSA', 2147483647, 0, 0, 824345474, 0, 0, 0, 'letswalo@leave.co.za', '', '', '', '', 0, '', '', '', '', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -153,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `tbldepartments` (
   `DepartmentShortName` varchar(100) NOT NULL,
   `CreationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbldepartments`
@@ -162,8 +164,39 @@ CREATE TABLE IF NOT EXISTS `tbldepartments` (
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `CreationDate`) VALUES
 (2, 'Information Technologies', 'ICT', '2017-11-01 07:19:37'),
 (3, 'Human Resource', 'Hr', '2021-05-21 08:27:45'),
-(4, 'Accounts', 'Ac', '2021-08-25 11:18:46'),
-(5, 'CEO', 'Chief operating officer', '2021-12-12 23:34:39');
+(4, 'Accounts', 'Ac', '2021-08-25 11:18:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblemergency`
+--
+
+DROP TABLE IF EXISTS `tblemergency`;
+CREATE TABLE IF NOT EXISTS `tblemergency` (
+  `emyId` int(30) NOT NULL AUTO_INCREMENT,
+  `emTitle` varchar(225) DEFAULT NULL,
+  `emName` varchar(225) DEFAULT NULL,
+  `emSurname` varchar(225) DEFAULT NULL,
+  `emRelationship` varchar(225) DEFAULT NULL,
+  `emHomecellno` int(255) DEFAULT NULL,
+  `emHometellno` int(255) DEFAULT NULL,
+  `emWorkcellno` int(255) DEFAULT NULL,
+  `emWorktellno` int(225) DEFAULT NULL,
+  `emPersonalemail` varchar(225) DEFAULT NULL,
+  `emWorkemail` varchar(225) DEFAULT NULL,
+  `emStreetname` varchar(225) DEFAULT NULL,
+  `emCity` varchar(225) DEFAULT NULL,
+  `emProvince` varchar(225) DEFAULT NULL,
+  `emPostalcode` int(10) DEFAULT NULL,
+  `emCountry` varchar(225) DEFAULT NULL,
+  `emPstreetname` varchar(225) DEFAULT NULL,
+  `emPCity` varchar(225) DEFAULT NULL,
+  `emPProvince` varchar(225) DEFAULT NULL,
+  `emPPostalcode` int(10) DEFAULT NULL,
+  `emPCountry` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`emyId`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -257,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `tblleavetype` (
   `date_to` varchar(200) NOT NULL,
   `CreationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblleavetype`
@@ -266,9 +299,9 @@ CREATE TABLE IF NOT EXISTS `tblleavetype` (
 INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `date_from`, `date_to`, `CreationDate`) VALUES
 (5, 'Casual Leave', 'Casual Leave', '2021-05-23', '2021-06-20', '2021-05-19 14:32:03'),
 (6, 'Medical Leave', 'Medical Leave', '2021-05-05', '2021-05-28', '2021-05-19 15:29:05'),
-(8, 'Other', 'Leave all staff', '31-05-2021', '04-06-2021', '2021-05-20 17:17:43'),
 (10, 'Annaul', 'Leave type', '2021-12-10 04:58:47', '2021-12-10 04:58:47', '2021-12-10 02:58:47'),
-(11, 'Annaul', 'Leave type', '2021-12-10 05:03:45', '2021-12-10 05:03:45', '2021-12-10 03:03:45');
+(11, 'Annaul', 'Leave type', '2021-12-10 05:03:45', '2021-12-10 05:03:45', '2021-12-10 03:03:45'),
+(12, 'Sick ', 'Sick Leave', '2021-12-17 04:23:21', '2021-12-17 04:23:21', '2021-12-17 02:23:21');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
