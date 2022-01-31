@@ -62,7 +62,7 @@ class LeaveController extends ResourceController
         if($data){
             return $this->respond($data);
         }else{
-            return $this->failNotFound('No leave found');
+            return $this->failNotFound('No leave/s found');
         }
     }
 
