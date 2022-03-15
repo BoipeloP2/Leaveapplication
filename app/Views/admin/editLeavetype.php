@@ -1,8 +1,4 @@
-
 <?php include('assets/includes/header.php')?>
-
-
-
 
 <body>
 	<div class="pre-loader">
@@ -17,7 +13,7 @@
 			</div>
 		</div>
 	</div>
-
+	
 	<?php include('assets/includes/navbar.php')?>
 
 	<?php include('assets/includes/right_sidebar.php')?>
@@ -33,12 +29,12 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-12">
 								<div class="title">
-									<h4>Department List</h4>
+									<h4>Leave Type List</h4>
 								</div>
 								<nav aria-label="breadcrumb" role="navigation">
 									<ol class="breadcrumb">
 										<li class="breadcrumb-item"><a href="admin_dashboard.php">Dashboard</a></li>
-										<li class="breadcrumb-item active" aria-current="page">Department Module</li>
+										<li class="breadcrumb-item active" aria-current="page">Leave Type Module</li>
 									</ol>
 								</nav>
 							</div>
@@ -48,28 +44,47 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">New Department</h2>
+								<h2 class="mb-30 h4">Edit Leave Type</h2>
 								<section>
-									<form name="save" method="post" action="<?= base_url('DepartmentController/create') ?>">
+									<form  method="post" action="<?= base_url('LeaveTypeController/update') ?>">
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label >Department Name</label>
-												<input name="DepartmentName" type="text" class="form-control" required="true" autocomplete="off">
+												<label >Leave Type</label>
+								                  <p class="mb-20"><input type="hidden" name="id" id="id" value="<?php echo $data['id']; ?>"></p>
+
+												<input name="LeaveType" type="text" class="form-control" required="true" value="<?php echo $data['LeaveType']; ?>" autocomplete="off">
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<label>Department Short Name</label>
-												<input name="DepartmentShortName" type="text" class="form-control" required="true" autocomplete="off" style="text-transform:uppercase">
+												<label>Leave Description</label>
+												<textarea name="Description" style="height: 5em;" class="form-control text_area"  type="text"><?php echo $data['Description']; ?></textarea>
 											</div>
 										</div>
 									</div>
+									<!-- <div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>Start Date</label>
+												<input name="date_from" class="form-control" type="date">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label>End Date</label>
+												<input name="date_to" class="form-control" type="date">
+											</div>
+										</div>
+									</div> -->
+									
 									<div class="col-sm-12 text-right">
 										<div class="dropdown">
-										   <input class="btn btn-primary" type="submit" value="create" name="add" id="add">
+										   <input class="btn btn-primary" type="submit"  value="update" id="add">
 									    </div>
 									</div>
 								   </form>
@@ -79,35 +94,34 @@
 						
 						<div class="col-lg-8 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">Department List</h2>
+								<h2 class="mb-30 h4">Leave Type List</h2>
 								<div class="pb-20">
 									<table class="data-table table stripe hover nowrap">
 										<thead>
 										<tr>
-											<th>SR NO.</th>
-											<th class="table-plus">DEPARTMENT</th>
-											<th>DEPART. SHORT NAME</th>
+										    <th class="table-plus">ID</th>
+											<th class="table-plus">LEAVETYPE</th>
+											<th class="table-plus">DESCRIPTION</th>
+											<th table-plus>DATE FROM</th>
 											<th class="datatable-nosort">ACTION</th>
 										</tr>
 										</thead>
 										<tbody>
 
-										<?php if($data): ?>
+										
 
-                                           <?php foreach($data as $row): ?>
+                                          <?php if($data): ?>
+
+                                            <?php foreach($data as $row): ?>
 	
-		                                       <tr>
-		                                        	<td><?php echo $row["id"]; ?></td>
-		                                        	<td><?php echo $row["DepartmentName"];?></td>
-		                                        	<td><?php echo $row["DepartmentShortName"];?></td>
-			                                        <td><?php echo $row["CreationDate"]?></td>
-			                                        <td><a href="<?php echo base_url('updateDepartment/'.$row['id']);?>" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>&nbsp &nbsp &nbsp &nbsp &nbsp 	
-			                                        <a href="<?php echo base_url('DepartmentController/delete/'.$row['id']);?>" onclick="" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a></td>
-		                                        	<td></td>
-	                                        	</tr>
+	                                         
 	
-	                                    	<?php endforeach; ?>
+	                                      	<?php endforeach; ?>
 	                                	<?php endif; ?>
+
+
+
+										
 
 											<!-- <tr>
 												<td> </td>
@@ -139,3 +153,15 @@
 	<?php include('assets/includes/scripts.php')?>
 </body>
 </html>
+
+
+<script>
+function delete_data(id)
+{
+    if(confirm("Are you sure you want to remove it?"))
+    {
+        window.location.href="<?php echo base_url(); ?>LeaveTypeController/delete"+id;
+    }
+    return false;
+}
+</script>

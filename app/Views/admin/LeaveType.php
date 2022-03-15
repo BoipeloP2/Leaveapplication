@@ -117,7 +117,7 @@
 		                                        	<td><?php echo $row["LeaveType"];?></td>
 			                                        <td><?php echo $row["Description"];?></td>
 			                                        <td><?php echo $row["date_from"]?></td>
-		                                        	<td><a href="<?php echo base_url('delete/'.$row['id']);?>" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>&nbsp &nbsp &nbsp &nbsp &nbsp 	
+		                                        	<td><a href="<?php echo base_url('update/'.$row['id']);?>" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>&nbsp &nbsp &nbsp &nbsp &nbsp 	
 		                                         	<a href="<?php echo base_url('LeaveTypeController/delete/'.$row['id']);?>" onclick="" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a></td>
 		                                        	<td></td>
 	                                               	</tr>

@@ -36,10 +36,21 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 //LeaveTypeController/create
 $routes->get('leavetype', 'LeaveTypeController::showLeavetype');
+
+$routes->get('update/(:num)', 'LeaveTypeController::updateLeavetypebyid/$1');
+
 //DepartmentController/create
 $routes->get('Department', 'DepartmentController::department');
+//DepartmentController/update
+
+$routes->get('updateDepartment/(:num)', 'DepartmentController::updateDepartmentbyid/$1');
+
 //EmpController/create
 $routes->get('Employee', 'empController::showEmp');
+
+
+
+
 //EmpController/update
 $routes->get('update/(:num)', 'empController::updatebyid/$1');
 

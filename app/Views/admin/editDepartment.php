@@ -48,14 +48,15 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-12 mb-30">
 							<div class="card-box pd-30 pt-10 height-100-p">
-								<h2 class="mb-30 h4">New Department</h2>
+								<h2 class="mb-30 h4">Edit Department</h2>
 								<section>
-									<form name="save" method="post" action="<?= base_url('DepartmentController/create') ?>">
+									<form name="save" method="post" action="<?= base_url('DepartmentController/updateDepartment') ?>">
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
+								<p class="mb-20"><input type="hidden" name="id" id="id" value="<?php echo $data['id']; ?>"></p>
 												<label >Department Name</label>
-												<input name="DepartmentName" type="text" class="form-control" required="true" autocomplete="off">
+												<input name="DepartmentName" type="text" class="form-control" required="true" value="<?php echo $data['DepartmentName']; ?>" autocomplete="off">
 											</div>
 										</div>
 									</div>
@@ -63,13 +64,13 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label>Department Short Name</label>
-												<input name="DepartmentShortName" type="text" class="form-control" required="true" autocomplete="off" style="text-transform:uppercase">
+												<input name="DepartmentShortName" type="text" class="form-control" required="true" value="<?php echo $data['DepartmentShortName']; ?>" autocomplete="off" style="text-transform:uppercase">
 											</div>
 										</div>
 									</div>
 									<div class="col-sm-12 text-right">
 										<div class="dropdown">
-										   <input class="btn btn-primary" type="submit" value="create" name="add" id="add">
+										   <input class="btn btn-primary" type="submit" value="update" name="add" id="add">
 									    </div>
 									</div>
 								   </form>
@@ -88,7 +89,7 @@
 											<th class="table-plus">DEPARTMENT</th>
 											<th>DEPART. SHORT NAME</th>
 											<th class="datatable-nosort">ACTION</th>
-										</tr>
+										</tr>x
 										</thead>
 										<tbody>
 
@@ -96,15 +97,7 @@
 
                                            <?php foreach($data as $row): ?>
 	
-		                                       <tr>
-		                                        	<td><?php echo $row["id"]; ?></td>
-		                                        	<td><?php echo $row["DepartmentName"];?></td>
-		                                        	<td><?php echo $row["DepartmentShortName"];?></td>
-			                                        <td><?php echo $row["CreationDate"]?></td>
-			                                        <td><a href="<?php echo base_url('updateDepartment/'.$row['id']);?>" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>&nbsp &nbsp &nbsp &nbsp &nbsp 	
-			                                        <a href="<?php echo base_url('DepartmentController/delete/'.$row['id']);?>" onclick="" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a></td>
-		                                        	<td></td>
-	                                        	</tr>
+		                                       
 	
 	                                    	<?php endforeach; ?>
 	                                	<?php endif; ?>

@@ -54,28 +54,47 @@ class empController extends ResourceController
       'pcountry'  => $this->request->getVar('pcountry'),
       'personalemail'  => $this->request->getVar('personalemail'),
       'workemail'  => $this->request->getVar('workemail'),
+      'eTitle' => $this->request->getVar('eTitle'),
+      'eFirstname'  => $this->request->getVar('eFirstname'),
+      'eSurname'  => $this->request->getVar('eSurname'),
+      'eRelationship'  => $this->request->getVar('eRelationship'),
+      'eHomecell'  => $this->request->getVar('eHomecell'),
+      'eHometell'  => $this->request->getVar('eHometell'),
+      'eWorkCell'  => $this->request->getVar('eWorkCell'),
+      'eWorktele'  => $this->request->getVar('eWorktele'),
+      'eStreetname'  => $this->request->getVar('eStreetname'),
+      'eCity'  => $this->request->getVar('eCity'),
+      'eProvince'  => $this->request->getVar('eProvince'),
+      'ePostalcode'  => $this->request->getVar('ePostalcode'),
+      'eCountry'  => $this->request->getVar('eCountry'),
 
 
 
 
     ];
-    $model->insert($data);
-    return $this->response->redirect(site_url('/Employee'));
+
+    if ($model->insert($data)) {
+      session()->setFlashdata('message', 'added Successfully!');
+      session()->setFlashdata('alert-class', 'alert-success');
+
+      return $this->response->redirect(site_url('/Employee'));
+    };
   }
 
-  public function delete($id = null){
+  public function delete($id = null)
+  {
     $model = new emp();
-       //$data = $model->where('id', $id)->delete($id);
+    //$data = $model->where('id', $id)->delete($id);
     $data['data'] = $model->where('id', $id)->delete($id);
     return $this->response->redirect(site_url('/Employee'));
     // if($data){
     //     $model->delete($id);
-        //return $this->response->redirect(site_url('/leavetype'));
+    //return $this->response->redirect(site_url('/leavetype'));
 
     // }else{
     //     return $this->failNotFound('No LeaveType found');
     // }
-}
+  }
 
   public function showbyid($id = null)
   {
@@ -92,10 +111,14 @@ class empController extends ResourceController
   {
     $model = new emp();
     $data['data'] = $model->where('id', $id)->first();
-   return view('admin/editemployees',$data);
+    return view('admin/editemployees', $data);
   }
 
-  public function update($id = null){
+  public function update($id = null)
+  {
+
+    helper(['form', 'url']);
+    
     $model = new emp();
     $id = $this->request->getVar('id');
     $data = [
@@ -128,17 +151,32 @@ class empController extends ResourceController
       'pcountry'  => $this->request->getVar('pcountry'),
       'personalemail'  => $this->request->getVar('personalemail'),
       'workemail'  => $this->request->getVar('workemail'),
-      //'disability'  => $this->request->getVar('disability'),
-
-
-
+      'eTitle' => $this->request->getVar('eTitle'),
+      'eFirstname'  => $this->request->getVar('eFirstname'),
+      'eSurname'  => $this->request->getVar('eSurname'),
+      'eRelationship'  => $this->request->getVar('eRelationship'),
+      'eHomecell'  => $this->request->getVar('eHomecell'),
+      'eHometell'  => $this->request->getVar('eHometell'),
+      'eWorkCell'  => $this->request->getVar('eWorkCell'),
+      'eWorktele'  => $this->request->getVar('eWorktele'),
+      'eStreetname'  => $this->request->getVar('eStreetname'),
+      'eCity'  => $this->request->getVar('eCity'),
+      'eProvince'  => $this->request->getVar('eProvince'),
+      'ePostalcode'  => $this->request->getVar('ePostalcode'),
+      'eCountry'  => $this->request->getVar('eCountry'),
 
 
     ];
-    $model->update($id,$data);
-    return $this->response->redirect(site_url('/Employee'));
 
-}
+         $model->update($id, $data);
+         return $this->response->redirect(site_url('/Employee'));
+    // if($model->update($id, $data)) {
+    //   session()->setFlashdata('message', 'Updated Successfully!');
+    //   session()->setFlashdata('alert-class', 'alert-success');
+
+    //   return $this->response->redirect(site_url('/Employee'));
+    // };
+  }
 
 
   public function showEmp()
@@ -146,7 +184,6 @@ class empController extends ResourceController
 
     $model = new emp();
     $data['data'] = $model->orderBy('id', 'DESC')->findAll();
-    return view("admin/employees",$data);
+    return view("admin/employees", $data);
   }
-
 }

@@ -44,16 +44,16 @@
 					</div>
 				</div>
 
-	 <form method="post" action="<?= base_url('empController/create') ?>">
+				<form method="post" name="frmAdd" action="<?= base_url('empController/create') ?>">
 
-				<div class="pd-20 card-box mb-30">
-					<div class="clearfix">
-						<div class="pull-left">
-							<h4 class="text-blue h4">EMPLOYEE PERSONAL DETAILS</h4>
-							<p class="mb-20"></p>
+					<div class="pd-20 card-box mb-30">
+						<div class="clearfix">
+							<div class="pull-left">
+								<h4 class="text-blue h4">EMPLOYEE PERSONAL DETAILS</h4>
+								<p class="mb-20"></p>
+							</div>
 						</div>
-					</div>
-					<div class="wizard-content">
+						<div class="wizard-content">
 							<section>
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
@@ -81,7 +81,7 @@
 									<div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label>Nick Name :</label>
-											<input name="nickname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+											<input name="nickname" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 										</div>
 									</div>
 									<div class="col-md-4 col-sm-12">
@@ -177,7 +177,7 @@
 									<div class="col-md-8 col-sm-12">
 										<div class="form-group">
 											<label>Passport :</label>
-											<input name="passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+											<input name="passport" type="text" class="form-control"  autocomplete="off" value="">
 
 										</div>
 									</div>
@@ -187,7 +187,7 @@
 									<div class="col-md-6 col-sm-12">
 										<div class="form-group">
 											<label>SARS TAX NO :</label>
-											<input name="sarstaxno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+											<input name="sarstaxno" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 
 										</div>
 									</div>
@@ -203,9 +203,9 @@
 								</div>
 
 							</section>
-						<!-- </form> -->
+							<!-- </form> -->
+						</div>
 					</div>
-				</div>
 
 			</div>
 
@@ -223,246 +223,247 @@
 					</div>
 					<div class="wizard-content">
 						<!-- <form method="post" action="<?= base_url() ?>/EmployeeController/create"> -->
-							<section>
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Home Cell No :</label>
-											<input name="homecellno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Home Tele :</label>
-											<input name="hometellno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-
-
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Work Cell No :</label>
-											<input name="workcellno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Work Tele No :</label>
-											<input name="worktellno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-
-								</div><div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label> Personal Email :</label>
-											<input name="personalemail" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Work Email :</label>
-											<input name="workemail" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
-									</div>
-
-								</div>
-								<div class="row">
-
-
-
-
-								</div>
-
-								<div class="clearfix">
-									<div class="pull-left">
-										<h4 class="text-blue h4">Physical Address</h4>
-										<p class="mb-20"></p>
+						<section>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Home Cell No :</label>
+										<input name="homecellno" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-8 col-sm-12">
-										<div class="form-group">
-											<label>Street :</label>
-											<input name="streetname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-
-
-										</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Home Tele :</label>
+										<input name="hometellno" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 									</div>
+								</div>
+
+
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Work Cell No :</label>
+										<input name="workcellno" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Work Tele No :</label>
+										<input name="worktellno" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label> Personal Email :</label>
+										<input name="personalemail" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Work Email :</label>
+										<input name="workemail" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
 
 
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>Physical Address :</label>
+
+							</div>
+
+							<div class="clearfix">
+								<div class="pull-left">
+									<h4 class="text-blue h4">Physical Address</h4>
+									<p class="mb-20"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8 col-sm-12">
+									<div class="form-group">
+										<label>Street :</label>
+										<input name="streetname" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
+
+									</div>
+								</div>
+
+
+
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>Physical Address :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>City :</label>
-											<input name="city" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>City :</label>
+										<input name="city" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Province :</label>
-											<select name="province" id="province" class="custom-select form-control" required="true" autocomplete="off" value="">
-												<option value="">Select Province</option>
-												<option value="Gauteng">Gauteng</option>
-												<option value="Western Cape">Western Cape</option>
-												<option value="Northern Cape">Northern Cape</option>
-												<option value="Eastern Cape">Eastern Cape</option>
-												<option value="KwaZulu-Natal">KwaZulu-Natal</option>
-												<option value="Free State">Free State</option>
-												<option value="North West">North West</option>
-												<option value="Mpumalanga">Mpumalanga</option>
-												<option value="Limpopo">Limpopo</option>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Province :</label>
+										<select name="province" id="province" class="custom-select form-control"  autocomplete="off" value="">
+											<option value="">Select Province</option>
+											<option value="Gauteng">Gauteng</option>
+											<option value="Western Cape">Western Cape</option>
+											<option value="Northern Cape">Northern Cape</option>
+											<option value="Eastern Cape">Eastern Cape</option>
+											<option value="KwaZulu-Natal">KwaZulu-Natal</option>
+											<option value="Free State">Free State</option>
+											<option value="North West">North West</option>
+											<option value="Mpumalanga">Mpumalanga</option>
+											<option value="Limpopo">Limpopo</option>
 
 
-											</select>
-										</div>
+										</select>
 									</div>
-
 								</div>
 
-								<div class="row">
+							</div>
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Postal Code :</label>
-											<input name="postalcode" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+							<div class="row">
 
-										</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Postal Code :</label>
+										<input name="postalcode" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
 									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Country :</label>
-											<input name="country" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-
-										</div>
-									</div>
-
-
 								</div>
-								<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Country :</label>
+										<input name="country" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>Physical Address :</label>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="row">
+
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>Physical Address :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
 									</div>
+								</div>
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>SARS TAX NO :</label>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>SARS TAX NO :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
-									</div>
-
-									
-								</div>
-								<div class="clearfix">
-									<div class="pull-left">
-										<h4 class="text-blue h4">Postal Address</h4>
-										<p class="mb-20"></p>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-8 col-sm-12">
-										<div class="form-group">
-											<label>Street :</label>
-											<input name="pstreetname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
 
 
-										</div>
+							</div>
+							<div class="clearfix">
+								<div class="pull-left">
+									<h4 class="text-blue h4">Postal Address</h4>
+									<p class="mb-20"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8 col-sm-12">
+									<div class="form-group">
+										<label>Street :</label>
+										<input name="pstreetname" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
+
 									</div>
+								</div>
 
 
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>Physical Address :</label>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>Physical Address :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>City :</label>
-											<input name="pcity" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-										</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>City :</label>
+										<input name="pcity" type="text" class="form-control wizard-required" autocomplete="off" value="">
 									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Province :</label>
-											<select name="pprovince" id="pprovince" class="custom-select form-control" required="true" autocomplete="off" value="">
-												<option value="">Select Province</option>
-												<option value="Gauteng">Gauteng</option>
-												<option value="Western Cape">Western Cape</option>
-												<option value="Northern Cape">Northern Cape</option>
-												<option value="Eastern Cape">Eastern Cape</option>
-												<option value="KwaZulu-Natal">KwaZulu-Natal</option>
-												<option value="Free State">Free State</option>
-												<option value="North West">North West</option>
-												<option value="Mpumalanga">Mpumalanga</option>
-												<option value="Limpopo">Limpopo</option>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Province :</label>
+										<select name="pprovince" id="pprovince" class="custom-select form-control"  autocomplete="off" value="">
+											<option value="">Select Province</option>
+											<option value="Gauteng">Gauteng</option>
+											<option value="Western Cape">Western Cape</option>
+											<option value="Northern Cape">Northern Cape</option>
+											<option value="Eastern Cape">Eastern Cape</option>
+											<option value="KwaZulu-Natal">KwaZulu-Natal</option>
+											<option value="Free State">Free State</option>
+											<option value="North West">North West</option>
+											<option value="Mpumalanga">Mpumalanga</option>
+											<option value="Limpopo">Limpopo</option>
 
 
-											</select>
-										</div>
+										</select>
 									</div>
-
 								</div>
 
-								<div class="row">
+							</div>
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Postal Code :</label>
-											<input name="ppostalcode" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+							<div class="row">
 
-										</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Postal Code :</label>
+										<input name="ppostalcode" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
 									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label>Country :</label>
-											<input name="pcountry" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
-
-										</div>
-									</div>
-
-
 								</div>
-								<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Country :</label>
+										<input name="pcountry" type="text" class="form-control wizard-required"  autocomplete="off" value="">
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>Physical Address :</label>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="row">
+
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>Physical Address :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
 									</div>
+								</div>
 
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<!-- <label>SARS TAX NO :</label>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<!-- <label>SARS TAX NO :</label>
 											<input name="Passport" type="text" class="form-control wizard-required" required="true" autocomplete="off" value=""> -->
 
-										</div>
 									</div>
+								</div>
 
-									<!-- <div class="col-md-4 col-sm-12">
+								<!-- <div class="col-md-4 col-sm-12">
 										<div class="form-group">
 											<label style="font-size:16px;"><b></b></label>
 											<div class="modal-footer justify-content-center">
@@ -470,9 +471,9 @@
 											</div>
 										</div>
 									</div> -->
-								</div>
+							</div>
 
-							</section>
+						</section>
 						<!-- </form> -->
 					</div>
 				</div>
@@ -483,36 +484,197 @@
 
 			<!-- Emergency No -->
 
-			
+			     <div class="pd-20 card-box mb-30">
+						<div class="clearfix">
+							<div class="pull-left">
+								<h4 class="text-blue h4">Emergency DETAILS</h4>
+								<p class="mb-20"></p>
+							</div>
+						</div>
+						<div class="wizard-content">
+							<section>
+								<div class="row">
+									
+									<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Title :</label>
+											<input name="eTitle" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div>
 
 
-
-			             <div class="min-height-200px">
-			                     <div class="pd-20 card-box mb-30">
+								</div>
+								<div class="row">
+									<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>First Name :</label>
+											<input name="eFirstname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Surname :</label>
+											<input name="eSurname" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Relationship :</label>
+											<input name="eRelationship" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div>
+								</div>
 
 								<div class="row">
-									 <div class="col-md-12 col-sm-12">
-										<div class="form-group">
-											<label style="font-size:16px;"><b></b></label>
-											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Save&nbsp;Staff</button>
-											</div>
-										</div>
-									</div> 
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Home Cell No :</label>
+										<input name="eHomecell" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+									</div>
 								</div>
-								 </div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Home Tele :</label>
+										<input name="eHometell" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+
+
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Work Cell No :</label>
+										<input name="eWorkCell" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Work Tele No :</label>
+										<input name="eWorktele" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+
+							</div>
+							
+							
+
+							<div class="clearfix">
+								<div class="pull-left">
+									<h4 class="text-blue h4">Physical Address</h4>
+									<p class="mb-20"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8 col-sm-12">
+									<div class="form-group">
+										<label>Street :</label>
+										<input name="eStreetname" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
+
+									</div>
+								</div>
+
+
+
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+									
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>City :</label>
+										<input name="eCity" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Province :</label>
+										<select name="eProvince" id="eProvince" class="custom-select form-control"  autocomplete="off" value="">
+											<option value="">Select Province</option>
+											<option value="Gauteng">Gauteng</option>
+											<option value="Western Cape">Western Cape</option>
+											<option value="Northern Cape">Northern Cape</option>
+											<option value="Eastern Cape">Eastern Cape</option>
+											<option value="KwaZulu-Natal">KwaZulu-Natal</option>
+											<option value="Free State">Free State</option>
+											<option value="North West">North West</option>
+											<option value="Mpumalanga">Mpumalanga</option>
+											<option value="Limpopo">Limpopo</option>
+
+
+										</select>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Postal Code :</label>
+										<input name="ePostalcode" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="form-group">
+										<label>Country :</label>
+										<input name="eCountry" type="text" class="form-control wizard-required"  autocomplete="off" value="">
+
+									</div>
+								</div>
+
+
+							</div>
+									
+								</div>
+								
+
+							
+
+								
+								
 
 							</section>
+						</div>
+					</div> 
+	              </div>
+
+
+
+
+		
+		
+				  <div class="min-height-200px">
+				     <div class="pd-20 card-box mb-30">
+
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+								<label style="font-size:16px;"><b></b></label>
+								<div class="modal-footer justify-content-center">
+									<button class="btn btn-primary" name="add_staff" id="add_staff" data-toggle="modal">Save&nbsp;Staff</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 			</div>
+		</div>
+
+	</div>
 	</form>
 
-			<!--End  Emergency No -->
+	<!--End  Emergency No -->
 
-			<?php include('assets/includes/footer.php'); ?>
-		</div>
+	<?php include('assets/includes/footer.php'); ?>
+	</div>
 	</div>
 	<!-- js -->
 	<?php include('assets/includes/scripts.php') ?>

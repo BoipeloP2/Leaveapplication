@@ -54,44 +54,39 @@ class DepartmentController extends ResourceController
             return $this->failNotFound('No department found');
         }
     }
+
+    public function updateDepartmentbyid ($id = null){
+        $model = new departmentsModel();
+        $data['data'] = $model->where('id', $id)->first();
+        return view('admin/editDepartment', $data);
+    }
     // update
-    public function update($id = null){
+    public function updateDepartment($id = null){
+
+    helper(['form', 'url']);
+
+
         $model = new departmentsModel();
         $id = $this->request->getVar('id');
         $data = [
             'DepartmentName' => $this->request->getVar('DepartmentName'),
             'DepartmentShortName'  => $this->request->getVar('DepartmentShortName'),
-            'CreationDate'  => $this->request->getVar('CreationDate'),
+            'CreationDate'  =>  date("Y-m-d H:i:s"),
          
         ];
         $model->update($id, $data);
-        $response = [
-          'status'   => 200,
-          'error'    => null,
-          'messages' => [
-              'success' => 'Department updated successfully'
-          ]
-      ];
-      return $this->respond($response);
+
+
+      return $this->response->redirect(site_url('/Department'));
+
     }
 
     // delete
     public function delete($id = null){
         $model = new departmentsModel();
-        $data = $model->where('id', $id)->delete($id);
-        if($data){
-            $model->delete($id);
-            $response = [
-                'status'   => 200,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Department successfully deleted'
-                ]
-            ];
-            return $this->respondDeleted($response);
-        }else{
-            return $this->failNotFound('No department found');
-        }
+        $data['data'] = $model->where('id', $id)->delete($id);
+        return $this->response->redirect(site_url('/Department'));
+
     }
 
     public function department(){

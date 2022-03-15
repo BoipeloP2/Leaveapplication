@@ -117,19 +117,29 @@
 											<textarea id="textarea1" name="description" class="form-control" required length="150" maxlength="150" required="true" autocomplete="off"></textarea>
 										</div>
 									</div>
-									<div class="col-md-4 col-sm-12">
-										<div class="form-group">
-											<label style="font-size:16px;"><b></b></label>
-											<div class="modal-footer justify-content-center">
-												<button class="btn btn-primary" name="apply" id="apply" data-toggle="modal">Apply&nbsp;Leave</button>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</section>
 						</form>
 					</div>
 				</div>
+				<div class="min-height-200px">
+				<div class="pd-20 card-box mb-30">
+
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+								<label style="font-size:16px;"><b></b></label>
+								<div class="modal-footer justify-content-center">
+								<button class="btn btn-primary" name="apply" id="apply" data-toggle="modal">Apply&nbsp;Leave</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			  </div>
 
 			</div>
 			<?php include('assets/includes/footer.php'); ?>

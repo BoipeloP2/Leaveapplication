@@ -144,7 +144,7 @@
 													<i class="dw dw-more"></i>
 												</a>
 												<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-													<a class="dropdown-item" href="<?php echo base_url('empController/updatebyid/'.$row['id']);?>"><i class="dw dw-edit2"></i> Edit</a>
+													<a class="dropdown-item" href="<?php echo base_url('update/'.$row['id']);?>"><i class="dw dw-edit2"></i> Edit</a>
 													<a class="dropdown-item" href="<?php echo base_url('empController/delete/'.$row['id']);?>"><i class="dw dw-delete-3"></i> Delete</a>
 												</div>
 											</div>

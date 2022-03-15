@@ -45,6 +45,12 @@ class LeaveTypeController extends ResourceController
         }
     }
 
+
+    public function updateLeavetypebyid ($id = null){
+        $model = new leaveTypesModel();
+        $data['data'] = $model->where('id', $id)->first();
+        return view('admin/editLeavetype', $data);
+    }
     // update
     public function update($id = null){
         $model = new leaveTypesModel();
