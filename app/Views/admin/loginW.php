@@ -50,7 +50,10 @@
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
-							<h2 class="text-center text-primary">OTT Leave Portal</h2>
+						<h3 class="text-center text-primary">Admin</h3>
+						<br>
+
+							<!-- <h2 class="text-center text-primary">OTT Leave Portal</h2> -->
 						</div>
 						<?php if(session()->getFlashdata('msg')):?>
                     <div class="alert alert-info">
@@ -83,7 +86,19 @@
 									   <input class="btn btn-primary btn-lg btn-block" name="signin" id="signin" type="submit" value="Sign In">
 									</div>
 								</div>
+								
+								
 							</div>
+							<div class="row pt-20">
+								
+								<div class="col-sm-12">
+									<div class="input-group mb-0">
+					                	<h5 class="text-center text-primary"><a href="<?php echo base_url('login') ?>">Employee Login</a></h5>
+									</div>
+								</div>
+								
+							</div>
+							
 						</form>
 					</div>
 				</div>

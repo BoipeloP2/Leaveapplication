@@ -211,6 +211,22 @@
 										</div>
 									</div> -->
 								</div>
+								<div class="row">
+									<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Password :</label>
+											<input name="epassword" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div>
+									<!-- <div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Confirm Password</label>
+											<input name="title" type="text" class="form-control wizard-required" required="true" autocomplete="off" value="">
+										</div>
+									</div> -->
+
+
+								</div>
 
 							</section>
 							<!-- </form> -->

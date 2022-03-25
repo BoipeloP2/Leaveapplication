@@ -37,7 +37,7 @@ $routes->get('/', 'Home::index');
 //LeaveTypeController/create
 $routes->get('leavetype', 'LeaveTypeController::showLeavetype');
 
-$routes->get('update/(:num)', 'LeaveTypeController::updateLeavetypebyid/$1');
+$routes->get('updateLeavetype/(:num)', 'LeaveTypeController::updateLeavetypebyid/$1');
 
 //DepartmentController/create
 $routes->get('Department', 'DepartmentController::department');

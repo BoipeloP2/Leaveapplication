@@ -6,7 +6,7 @@ class employeesModel extends Model
 {
     protected $table = 'tblemployees';
     protected $primaryKey = 'emp_id';
-    protected $allowedFields = ['FirstName', 'LastName','EmailId','Gender','Dob','Department','Address','Av_leave','Phonenumber','status','RegDate','role','location'];
+    protected $allowedFields = ['FirstName', 'LastName','EmailId','Password','Gender','Dob','Department','Address','Av_leave','Phonenumber','status','RegDate','role','location'];
 
    
 }

@@ -3,7 +3,7 @@
 use CodeIgniter\Controller;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
-use App\Models\adminModel;
+use App\Models\emp;
   
 class Login extends Controller
 {
@@ -18,22 +18,22 @@ class Login extends Controller
     public function auth()
     {
         $session = session();
-        $model = new adminModel();
+        $model = new emp();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-        $data = $model->where('email', $email)->first();
+        $data = $model->where('workemail', $email)->first();
         if($data){
-            $pass = $data['User_password'];
+            $pass = $data['epassword'];
             $verify_pass = password_verify($password, $pass);
-            if($verify_pass){
+            if($verify_pass ==true){
                 $ses_data = [
                     'id'       => $data['id'],
-                    'name'     => $data['name'],
-                    'email'    => $data['email'],
+                    'firstname'     => $data['firstname'],
+                    'workemail'    => $data['workemail'],
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('admin/dashboard');
             }else{
                 $session->setFlashdata('msg', 'Wrong Password');
                 return redirect()->to('/login');
