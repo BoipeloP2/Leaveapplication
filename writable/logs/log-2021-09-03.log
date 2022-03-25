@@ -1,0 +1,48 @@
+ERROR - 2021-09-03 04:15:49 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2021-09-03 04:15:49 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\EmployeeController.php(54): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\EmployeeController->show('5')
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+ERROR - 2021-09-03 04:16:55 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2021-09-03 04:16:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\EmployeeController.php(54): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\EmployeeController->show('5')
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+ERROR - 2021-09-03 04:17:08 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2021-09-03 04:17:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\EmployeeController.php(16): CodeIgniter\BaseModel->findAll()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\EmployeeController->index()
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}

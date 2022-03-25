@@ -1,0 +1,8 @@
+CRITICAL - 2021-10-14 08:38:52 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$2021/10/14
+#0 C:\wamp64\www\LeaveApplicationVersion1\app\Controllers\DepartmentController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\L...', 28, Array)
+#1 C:\wamp64\www\LeaveApplicationVersion1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\DepartmentController->create()
+#2 C:\wamp64\www\LeaveApplicationVersion1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartmentController))
+#3 C:\wamp64\www\LeaveApplicationVersion1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\LeaveApplicationVersion1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\LeaveApplicationVersion1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\L...')
+#6 {main}

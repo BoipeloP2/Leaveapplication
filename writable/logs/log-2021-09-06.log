@@ -1,0 +1,182 @@
+ERROR - 2021-09-06 06:11:05 --> Table 'leave_staff.users' doesn't exist
+CRITICAL - 2021-09-06 06:11:05 --> Call to a member function getRow() on bool
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Validation\Validation.php(312): CodeIgniter\Validation\Rules->is_unique('abjuniorsa@gmai...', 'email', Array, NULL)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Validation\Validation.php(159): CodeIgniter\Validation\Validation->processRules('email', 'email', 'abjuniorsa@gmai...', Array, Array)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Controller.php(183): CodeIgniter\Validation\Validation->run()
+#3 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Register.php(28): CodeIgniter\Controller->validate(Array)
+#4 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Register->save()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#9 {main}
+CRITICAL - 2021-09-06 06:16:05 --> Undefined index: user_password
+#0 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\c...', 22, Array)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#6 {main}
+ERROR - 2021-09-06 06:17:41 --> Error connecting to the database: Unknown database 'login_db'
+CRITICAL - 2021-09-06 06:17:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'login_db'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+ERROR - 2021-09-06 06:17:44 --> Error connecting to the database: Unknown database 'login_db'
+CRITICAL - 2021-09-06 06:17:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'login_db'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+ERROR - 2021-09-06 06:18:09 --> Error connecting to the database: Unknown database 'login_db'
+CRITICAL - 2021-09-06 06:18:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'login_db'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(20): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+CRITICAL - 2021-09-06 06:25:36 --> Undefined index: user_password
+#0 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\c...', 22, Array)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#6 {main}
+CRITICAL - 2021-09-06 06:25:39 --> Undefined index: user_password
+#0 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\c...', 22, Array)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#6 {main}
+CRITICAL - 2021-09-06 06:26:00 --> Undefined index: user_password
+#0 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\c...', 22, Array)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#6 {main}
+CRITICAL - 2021-09-06 06:31:07 --> Undefined index: user_password
+#0 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\c...', 22, Array)
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#6 {main}
+ERROR - 2021-09-06 06:47:32 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 06:48:28 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 06:57:28 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 07:04:25 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 07:12:32 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 07:13:53 --> Duplicate entry '0' for key 'PRIMARY'
+ERROR - 2021-09-06 07:22:21 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2021-09-06 07:22:21 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(686): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(687): CodeIgniter\Model->insert(Array, false)
+#8 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Register.php(41): CodeIgniter\BaseModel->save(Array)
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Register->save()
+#10 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#14 {main}
+ERROR - 2021-09-06 07:32:30 --> Error connecting to the database: Unknown database 'login_db'
+CRITICAL - 2021-09-06 07:32:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'login_db'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(228): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(644): CodeIgniter\Model->doFirst()
+#4 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Login.php(24): CodeIgniter\BaseModel->first()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Login->auth()
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#10 {main}
+ERROR - 2021-09-06 08:00:58 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2021-09-06 08:00:58 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(686): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(687): CodeIgniter\Model->insert(Array, false)
+#8 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Register.php(41): CodeIgniter\BaseModel->save(Array)
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Register->save()
+#10 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#14 {main}
+ERROR - 2021-09-06 08:48:51 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2021-09-06 08:48:51 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(686): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(687): CodeIgniter\Model->insert(Array, false)
+#8 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Register.php(41): CodeIgniter\BaseModel->save(Array)
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Register->save()
+#10 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#14 {main}
+ERROR - 2021-09-06 08:49:08 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2021-09-06 08:49:08 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('INSERT INTO `tb...')
+#1 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Model.php(686): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\BaseModel.php(687): CodeIgniter\Model->insert(Array, false)
+#8 C:\wamp64\www\codeigniter-rest-api\app\Controllers\Register.php(41): CodeIgniter\BaseModel->save(Array)
+#9 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Register->save()
+#10 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\codeigniter-rest-api\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\wamp64\www\codeigniter-rest-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\wamp64\\www\\c...')
+#14 {main}
